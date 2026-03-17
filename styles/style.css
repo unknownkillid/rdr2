@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 .main-header {
@@ -73,10 +74,13 @@
 .main-section {
     width: 100%;
     height: 920px;
-    background-image: url('../assets/mainBG.png');
+    background-image: url('../assets/bgMainSec.png'), linear-gradient(#77777717, #777777);
+    ;
+
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    background-blend-mode: luminosity;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -107,13 +111,13 @@
 
 
 .main-section-content h1 {
-    color: #fff;
+    color: white;
     font-size: 48px;
     font-family: 'ChineseRocks', sans-serif;
 }
 
 .main-section-content p {
-    color: #fff;
+    color: white;
     font-size: 24px;
     font-family: 'ChineseRocks', sans-serif;
 }
@@ -130,7 +134,7 @@
 .button {
     --border-right: 6px;
     --text-stroke-color: rgba(201, 187, 187, 0.6);
-    --animation-color: #b8b8b8;
+    --animation-color: white;
     --fs-size: 2em;
     letter-spacing: 3px;
     text-decoration: none;
@@ -161,4 +165,33 @@
 .button:hover .hover-text {
     width: 100%;
     filter: drop-shadow(0 0 23px var(--animation-color))
+}
+
+.rulesSection {
+    width: 100%;
+    height: 820px;
+    background-image: url('../assets/rulesSection.png'), linear-gradient(#777777, #77777717);
+    background-size: cover;
+    background-position: center -100px;
+    background-repeat: no-repeat;
+    background-blend-mode: luminosity;
+}
+
+.paperBox {
+    width: 500px;
+    height: 600px;
+    background-image: url(../assets/paper.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+   
+}
+
+.paperBox h2 {
+    color: rgb(211, 211, 211);
+    font-size: 36px;
+    font-family: 'ChineseRocks', sans-serif;
+    text-align: center;
+    padding-top: 50px;
+    padding: 140px;
 }
