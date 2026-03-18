@@ -5,6 +5,15 @@
     scroll-behavior: smooth;
 }
 
+::-webkit-scrollbar-thumb {
+    background-color: #ff0000;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
 .main-header {
     width: 100%;
     height: 70px;
@@ -18,6 +27,8 @@
     font-family: 'ChineseRocks', sans-serif;
     position: fixed;
     animation: animateHeader 2s ease-in-out;
+    transition: 1s;
+    z-index: 5 !important;
 }
 
 @keyframes animateHeader {
@@ -30,12 +41,23 @@
     }
 }
 
+.logo-header {
+    position: relative;
 
+}
 
 .logo {
     width: 70px;
     transform: translateY(5px);
+    transition: 1;
+    cursor: pointer;
 }
+
+.logo:hover {
+    scale: 1.2;
+}
+
+
 
 .main-header-links {
     display: flex;
@@ -175,23 +197,81 @@
     background-position: center -100px;
     background-repeat: no-repeat;
     background-blend-mode: luminosity;
+    padding: 0 200px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
 }
 
 .paperBox {
     width: 500px;
     height: 600px;
     background-image: url(../assets/paper.png);
-    background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-   
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 30px;
+
 }
 
 .paperBox h2 {
-    color: rgb(211, 211, 211);
+    color: rgb(255, 3, 3);
     font-size: 36px;
     font-family: 'ChineseRocks', sans-serif;
     text-align: center;
-    padding-top: 50px;
-    padding: 140px;
+}
+
+.paperBox p {
+    color: black;
+    font-size: 18px;
+    font-family: 'ChineseRocks', sans-serif;
+    text-align: center;
+    width: 60%;
+}
+
+.rules-link {
+    margin-top: 20px;
+    color: red;
+    text-decoration: none;
+    font-size: 18px;
+    font-family: 'ChineseRocks', sans-serif;
+    border: 1px solid red;
+    padding: 10px 20px;
+    transition: .8s;
+    border-top-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+
+.rules-link:hover {
+    background-color: red;
+    color: white;
+}
+
+.about-us-section {
+    width: 100%;
+    height: 820px;
+    background-image: url('../assets/aboutUsSection.png'), linear-gradient(#777777, #77777717);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-blend-mode: luminosity;
+}
+
+
+.hidden {
+    opacity: 0;
+    transform: translateX(-200px) !important;
+    transition: 1s cubic-bezier(0.895, 0.03, 0.685, 0.22)
+}
+
+.showable {
+    opacity: 1;
+    transform: translateX(0) !important;
+}
+
+.headerAnimation {
+    transform: translateY(-70px);
 }

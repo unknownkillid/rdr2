@@ -7,13 +7,16 @@
     <title>Document</title>
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="fonts/font-face.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
 
     <header class="main-header" id="mainHeader">
         <div class="logo-header">
-            <img src="assets/mainLogo.png" class="logo" alt="">
+            <a href="#"><img src="assets/mainLogo.png" class="logo" alt="Home" title="Beyond RolePlay"></a>
         </div>
         <div class="main-header-links">
             <a href="#">Home</a>
@@ -42,14 +45,24 @@
     </section>
 
     <section class="rulesSection" id="rulesSection">
-        <div class="paperBox" data-tilt>
-            <h2>Game Rules</h2>
+        <div class="paperBox hidden" data-tilt>
+            <h2>BEYOND RULES</h2>
+            <p>All players must follow the server rules at all times.
+                Breaking any rule will result in punishment, including warnings, kicks, temporary bans, or permanent
+                bans depending on the severity of the violation.</p>
+
+            <a href="#" class="rules-link" id="rulesLink">Read More</a>
         </div>
+    </section>
+
+    <section class="about-us-section" id="aboutUsSection">
+
     </section>
 
 
     <script src="script/script.js"></script>
     <script type="text/javascript" src="node_modules/vanilla-tilt/dist/vanilla-tilt.js"></script>
+
 
 </body>
 
